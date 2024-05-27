@@ -1,0 +1,11 @@
+{
+  "name": "GeemL",
+  "symbol": "GML",
+  "description": "GeemL coin is a currency of Soceton World. You can buy every services Soceton World provides using GeemL coin. Soceton World: www.soceton.com",
+  "image": "https://raw.githubusercontent.com/soceton/crypto/main/GML.png",
+  "extensions": {
+    "website": "www.soceton.com/geeml",
+    "twitter": "https://x.com/geemlcoin",
+    "telegram": "https://t.me/geemlcoin"
+  }
+}
