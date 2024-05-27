@@ -1,0 +1,28 @@
+# https://mafyuh.com/posts/spl-token-cli/
+
+# creating wallet
+sh -c "$(curl -sSfL https://release.solana.com/v1.18.14/install)"
+source /home/sadid-dl/.profile
+solana --version
+solana-keygen new
+solana balance
+
+# creating tokens
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env.fish"
+. "$HOME/.cargo/env"
+sudo apt install libudev-dev
+sudo apt install libssl-dev pkg-config
+sudo apt install build-essential
+cargo install spl-token-cli
+
+# creating tokens commands
+spl-token create-token
+spl-token create-account <token address>
+spl-token mint <token address> 1000000000 <account address>
+spl-token transfer --fund-recipient --allow-unfunded-recipient <token address> 10000000 <account address>
+spl-token accounts # check balance
+
+# revoke mint and freeze authority
+spl-token authorize <token address> mint --disable
+spl-token authorize <token address> freeze --disable
